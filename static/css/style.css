@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.bunkers-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bunker {
+    flex: 1;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.bunker-layout {
+    position: relative;
+    height: 700px; /* 높이를 600px에서 700px로 증가 */
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    padding: 10px 25px;
+}
+
+.cabinets-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 120px); /* Stocker의 높이와 여유 공간 확보 */
+}
+
+.cabinet-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.cabinet {
+    width: 80px;
+    height: 100px;
+    border: 1px solid #000;
+    padding: 5px;
+    background-color: #f0f0f0;
+    font-size: 0.8em;
+}
+
+.agv-path {
+    height: 20px;
+    background-color: #e0e0e0;
+    margin: 5px 0;
+}
+
+.agv-path-vertical {
+    width: 20px;
+    background-color: #e0e0e0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.agv-path-left {
+    left: 0;
+}
+
+.agv-path-right {
+    right: 0;
+}
+
+.stocker {
+    position: absolute;
+    bottom: 10px; /* 바닥에서 10px 위에 위치 */
+    left: 25%;
+    width: 50%;
+    height: 80px;
+    border: 1px solid #000;
+    padding: 5px;
+    background-color: #D3D3D3; /* 기본 색상을 밝은 회색으로 설정 */
+}
+
+.agv {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #1E90FF; /* 도저 파란색(Dodger Blue)으로 변경 */
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* 글자색을 흰색으로 변경하여 가독성 향상 */
+    font-size: 0.7em;
+    transition: all 2s;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.gas-tanks {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.gas-tank {
+    width: 15px;
+    height: 40px;
+    border: 1px solid #000;
+    margin: 2px;
+    display: inline-block;
+    background-color: #D3D3D3; /* 기본 색상을 밝은 회색으로 설정 */
+}
+
+.gas-tank[data-status="full"] {
+    background-color: #4CAF50;
+}
+
+.gas-tank[data-status="empty"] {
+    background-color: #F44336;
+}
+
+.gas-tank[data-status="in_use"] {
+    background-color: #FFC107;
+}
